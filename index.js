@@ -12,7 +12,7 @@ var options = {
 }
 
 
-var output = fs.createWriteStream('output.csv');
+var output = fs.createWriteStream(process.argv[2]+'output.csv');
 output.write('Address,formatted_address,Lat,Lon\n'); //write the header row of the output csv
 
 lr = new LineByLineReader(options.sourceFile);
